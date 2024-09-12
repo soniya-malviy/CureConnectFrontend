@@ -1,0 +1,142 @@
+[
+  {
+    "test_id": 1,
+    "test_type": "Complete Blood Count (CBC)",
+    "location": "Mumbai, Maharashtra",
+    "price": 500,
+    "description": "A comprehensive test to evaluate overall health and detect a range of disorders."
+  },
+  {
+    "test_id": 2,
+    "test_type": "Lipid Profile",
+    "location": "Delhi, Delhi",
+    "price": 800,
+    "description": "Measures cholesterol levels to assess heart disease risk."
+  },
+  {
+    "test_id": 3,
+    "test_type": "Liver Function Test (LFT)",
+    "location": "Bengaluru, Karnataka",
+    "price": 600,
+    "description": "Evaluates liver health by measuring levels of liver enzymes and proteins."
+  },
+  {
+    "test_id": 4,
+    "test_type": "Kidney Function Test (KFT)",
+    "location": "Chennai, Tamil Nadu",
+    "price": 650,
+    "description": "Assesses kidney function through tests of blood and urine."
+  },
+  {
+    "test_id": 5,
+    "test_type": "Thyroid Function Test (TFT)",
+    "location": "Hyderabad, Telangana",
+    "price": 700,
+    "description": "Measures thyroid hormone levels to diagnose thyroid disorders."
+  },
+  {
+    "test_id": 6,
+    "test_type": "Diabetes Screening",
+    "location": "Kolkata, West Bengal",
+    "price": 550,
+    "description": "Tests for glucose levels to diagnose and monitor diabetes."
+  },
+  {
+    "test_id": 7,
+    "test_type": "Vitamin D Test",
+    "location": "Pune, Maharashtra",
+    "price": 750,
+    "description": "Checks vitamin D levels to assess bone health and immune function."
+  },
+  {
+    "test_id": 8,
+    "test_type": "Pregnancy Test",
+    "location": "Ahmedabad, Gujarat",
+    "price": 300,
+    "description": "Detects the presence of pregnancy hormones in urine or blood."
+  },
+  {
+    "test_id": 9,
+    "test_type": "HIV Test",
+    "location": "Surat, Gujarat",
+    "price": 1000,
+    "description": "Detects HIV infection in the blood to diagnose and monitor HIV status."
+  },
+  {
+    "test_id": 10,
+    "test_type": "Chest X-Ray",
+    "location": "Jaipur, Rajasthan",
+    "price": 1200,
+    "description": "Imaging test to view the lungs and chest cavity for abnormalities."
+  },
+  {
+    "test_id": 11,
+    "test_type": "Allergy Test",
+    "location": "Lucknow, Uttar Pradesh",
+    "price": 850,
+    "description": "Identifies allergens that cause allergic reactions."
+  },
+  {
+    "test_id": 12,
+    "test_type": "Bone Density Test",
+    "location": "Indore, Madhya Pradesh",
+    "price": 900,
+    "description": "Measures bone strength to assess risk of osteoporosis."
+  },
+  {
+    "test_id": 13,
+    "test_type": "Prostate-Specific Antigen (PSA) Test",
+    "location": "Bhopal, Madhya Pradesh",
+    "price": 950,
+    "description": "Detects prostate abnormalities and potential cancer."
+  },
+  {
+    "test_id": 14,
+    "test_type": "Hepatitis B Test",
+    "location": "Raipur, Chhattisgarh",
+    "price": 700,
+    "description": "Detects hepatitis B virus infection in the blood."
+  },
+  {
+    "test_id": 15,
+    "test_type": "Hepatitis C Test",
+    "location": "Bilaspur, Chhattisgarh",
+    "price": 750,
+    "description": "Detects hepatitis C virus infection in the blood."
+  },
+  {
+    "test_id": 16,
+    "test_type": "Urinalysis",
+    "location": "Coimbatore, Tamil Nadu",
+    "price": 400,
+    "description": "Analyzes urine to assess kidney function and detect disorders."
+  },
+  {
+    "test_id": 17,
+    "test_type": "Pregnancy Ultrasound",
+    "location": "Madurai, Tamil Nadu",
+    "price": 1400,
+    "description": "Imaging test to visualize the fetus and assess pregnancy health."
+  },
+  {
+    "test_id": 18,
+    "test_type": "Electrocardiogram (ECG)",
+    "location": "Vijayawada, Andhra Pradesh",
+    "price": 600,
+    "description": "Records the electrical activity of the heart to detect heart issues."
+  },
+  {
+    "test_id": 19,
+    "test_type": "CT Scan",
+    "location": "Nashik, Maharashtra",
+    "price": 2000,
+    "description": "Imaging test providing detailed cross-sectional views of the body."
+  },
+  {
+    "test_id": 20,
+    "test_type": "MRI Scan",
+    "location": "Vadodara, Gujarat",
+    "price": 3000,
+    "description": "Detailed imaging test using magnetic fields to view internal structures."
+  }
+]

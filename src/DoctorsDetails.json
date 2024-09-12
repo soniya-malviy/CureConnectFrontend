@@ -1,0 +1,402 @@
+[
+    {
+        "id": 1,
+        "name": "Dr. Amit Sharma",
+        "specialization": "Cardiologist",
+        "image": "https://t3.ftcdn.net/jpg/01/67/15/98/360_F_167159846_MCrwVzB7ysdZKr2vIiJkiCacEoNWagdn.jpg",
+        "address": "123 Main Street, New Delhi, Delhi",
+        "rating": 95,
+        "consulting_fees": 1500,
+        "city": "New Delhi",
+        "state": "Delhi",
+        "education": "MBBS, MD (Cardiology) - AIIMS Delhi",
+        "work_experience": "10 years of experience in cardiology, previously associated with Apollo Hospitals",
+        "reviews": [
+            "Dr. Sharma is an excellent cardiologist with a thorough understanding of heart conditions. - Rajesh",
+            "Very professional and kind. His treatment has helped me a lot. - Anita",
+            "Highly recommend for anyone with heart issues. - Manoj",
+            "Dr. Sharma provided the best care and was always available for follow-ups. - Priya"
+        ],
+        "description": "Dr. Amit Sharma is a renowned cardiologist with a decade of experience in treating heart diseases. Known for his compassionate care and advanced treatment methods, Dr. Sharma has helped numerous patients lead healthier lives."
+    },
+    {
+        "id": 2,
+        "name": "Dr. Bhavesh Patel",
+        "specialization": "Dermatologist",
+        "image": "https://t3.ftcdn.net/jpg/03/00/22/02/360_F_300220248_VKEd3QKx31kzqHcwZfnGmWKZLYTjf8R0.jpg",
+        "address": "456 Elm Street, Mumbai, Maharashtra",
+        "rating": 90,
+        "consulting_fees": 2000,
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "education": "MBBS, MD (Dermatology) - Grant Medical College, Mumbai",
+        "work_experience": "8 years of experience in dermatology, specialized in cosmetic dermatology and laser treatments",
+        "reviews": [
+            "Dr. Patel's expertise in dermatology is outstanding. - Neha",
+            "Great results from the treatments. - Arjun",
+            "Very knowledgeable and patient. - Sneha",
+            "His recommendations were spot on and helped clear my skin issues. - Varun"
+        ],
+        "description": "Dr. Bhavesh Patel is a leading dermatologist with extensive experience in treating various skin conditions. He is known for his advanced techniques and personalized care in dermatology, offering both medical and cosmetic solutions."
+    },
+    {
+        "id": 3,
+        "name": "Dr. Chandan Gupta",
+        "specialization": "Orthopedic Surgeon",
+        "image": "https://t4.ftcdn.net/jpg/02/69/98/99/360_F_269989951_9Gf7PWaRtrpm2EochO3D5WVn22sFZbNZ.jpg",
+        "address": "789 Oak Street, Bengaluru, Karnataka",
+        "rating": 92,
+        "consulting_fees": 1800,
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "education": "MBBS, MS (Orthopedics) - Bangalore Medical College",
+        "work_experience": "12 years of experience in orthopedic surgery, specializes in joint replacement and sports injuries",
+        "reviews": [
+            "Dr. Gupta is an expert in orthopedic surgeries and has a very caring attitude. - Sunil",
+            "The surgery went smoothly and the recovery was quicker than expected. - Priya",
+            "Very skilled and professional. Highly recommended for joint issues. - Raj",
+            "Dr. Gupta provided excellent post-surgery care. - Neeta"
+        ],
+        "description": "Dr. Chandan Gupta is a highly experienced orthopedic surgeon known for his expertise in joint replacement and sports injury treatments. His comprehensive care approach ensures optimal recovery and patient satisfaction."
+    },
+    {
+        "id": 4,
+        "name": "Dr. Deepak Kumar",
+        "specialization": "Pediatrician",
+        "image": "https://t4.ftcdn.net/jpg/02/57/48/67/360_F_257486764_GnnrHRNIBV93mAwR0aiNkS0x5UjDfIcl.jpg",
+        "address": "321 Pine Street, Chennai, Tamil Nadu",
+        "rating": 88,
+        "consulting_fees": 1700,
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "education": "MBBS, MD (Pediatrics) - Madras Medical College",
+        "work_experience": "9 years of experience in pediatrics, specializes in childhood diseases and preventive care",
+        "reviews": [
+            "Dr. Kumar is very gentle with children and provides thorough care. - Asha",
+            "My child felt comfortable during the visit. - Ravi",
+            "Excellent pediatrician with a great understanding of children's health. - Meera",
+            "Dr. Kumar has been very helpful with my child's health issues. - Suresh"
+        ],
+        "description": "Dr. Deepak Kumar is a dedicated pediatrician with extensive experience in managing childhood diseases and preventive care. His compassionate approach ensures a comfortable experience for both children and parents."
+    },
+    {
+        "id": 5,
+        "name": "Dr. Ekta Mehta",
+        "specialization": "Gynecologist",
+        "image": "https://t3.ftcdn.net/jpg/01/14/89/28/360_F_114892812_Va0KWhvmSUOoYNEoHCAOJ8uYXzBiD8vY.jpg",
+        "address": "654 Cedar Street, Hyderabad, Telangana",
+        "rating": 85,
+        "consulting_fees": 1600,
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "education": "MBBS, MD (Obstetrics and Gynecology) - Osmania Medical College",
+        "work_experience": "7 years of experience in gynecology, specializes in high-risk pregnancies and reproductive health",
+        "reviews": [
+            "Dr. Mehta is very supportive and attentive. - Anjali",
+            "Her expertise in handling high-risk pregnancies is impressive. - Arun",
+            "Very professional and caring doctor. - Renu",
+            "Dr. Mehta's advice was very helpful during my pregnancy. - Aditi"
+        ],
+        "description": "Dr. Ekta Mehta is a skilled gynecologist specializing in high-risk pregnancies and reproductive health. Her caring and professional approach ensures excellent care for women's health needs."
+    },
+    {
+        "id": 6,
+        "name": "Dr. Farhan Singh",
+        "specialization": "Neurologist",
+        "image": "https://media.istockphoto.com/id/1187318087/photo/portrait-of-happy-young-handsome-indian-man-doctor-smiling.jpg?s=612x612&w=0&k=20&c=PPGbJKhAjkab5waxx7GCleovSMuXh4KNW0ASqUkfbaU=",
+        "address": "987 Maple Street, Kolkata, West Bengal",
+        "rating": 93,
+        "consulting_fees": 1900,
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "education": "MBBS, MD (Neurology) - Medical College, Kolkata",
+        "work_experience": "11 years of experience in neurology, specializes in stroke and epilepsy treatments",
+        "reviews": [
+            "Dr. Singh's treatment for my neurological condition has been very effective. - Sanjay",
+            "He is very knowledgeable and attentive to patient needs. - Meena",
+            "Highly recommend for anyone with neurological issues. - Rajiv",
+            "Dr. Singh has provided excellent care and follow-up. - Preeti"
+        ],
+        "description": "Dr. Farhan Singh is a prominent neurologist with a focus on stroke and epilepsy. His expertise and thorough approach to treatment provide significant relief and care to his patients."
+    },
+    {
+        "id": 7,
+        "name": "Dr. Gaurav Verma",
+        "specialization": "Endocrinologist",
+        "image": "https://media.gettyimages.com/id/1298800629/photo/portrait-of-confident-male-doctor-looking-at-camera.jpg?s=612x612&w=gi&k=20&c=nxBik4I0ORxThvu1UCzJkUA9D9BBTRtwLdHYa_aMupM=",
+        "address": "135 Birch Street, Pune, Maharashtra",
+        "rating": 89,
+        "consulting_fees": 1750,
+        "city": "Pune",
+        "state": "Maharashtra",
+        "education": "MBBS, MD (Endocrinology) - BJ Medical College, Pune",
+        "work_experience": "9 years of experience in endocrinology, specializing in diabetes and thyroid disorders",
+        "reviews": [
+            "Dr. Verma's management of my diabetes has been exceptional. - Ashok",
+            "He is very patient and explains everything in detail. - Swati",
+            "Excellent care for thyroid issues. - Ramesh",
+            "Dr. Verma's approach has significantly improved my health. - Pooja"
+        ],
+        "description": "Dr. Gaurav Verma is a skilled endocrinologist specializing in diabetes and thyroid disorders. His comprehensive care approach and expertise help manage and treat various endocrine conditions effectively."
+    },
+    {
+        "id": 8,
+        "name": "Dr. Hema Rao",
+        "specialization": "Ophthalmologist",
+        "image": "https://img.freepik.com/free-photo/attractive-medical-professional-uniform-standing-with-arms-crossed-against-isolated-background_662251-416.jpg",
+        "address": "246 Willow Street, Ahmedabad, Gujarat",
+        "rating": 91,
+        "consulting_fees": 1650,
+        "city": "Ahmedabad",
+        "state": "Gujarat",
+        "education": "MBBS, MS (Ophthalmology) - Smt. N.H.L. Municipal Medical College, Ahmedabad",
+        "work_experience": "10 years of experience in ophthalmology, specializes in cataract and refractive surgeries",
+        "reviews": [
+            "Dr. Rao is very skilled in eye surgeries and treatments. - Kiran",
+            "She handled my cataract surgery with great precision. - Rajesh",
+            "Very professional and attentive to patient needs. - Neelam",
+            "Dr. Rao's care and follow-up were excellent. - Rohan"
+        ],
+        "description": "Dr. Hema Rao is a renowned ophthalmologist specializing in cataract and refractive surgeries. Her extensive experience and patient-centered approach ensure high-quality eye care."
+    },
+    {
+        "id": 9,
+        "name": "Dr. Indira Joshi",
+        "specialization": "Oncologist",
+        "image": "https://plus.unsplash.com/premium_photo-1682089872205-dbbae3e4ba32?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5kaWFuJTIwZG9jdG9yfGVufDB8fDB8fHww",
+        "address": "369 Ash Street, Surat, Gujarat",
+        "rating": 87,
+        "consulting_fees": 2200,
+        "city": "Surat",
+        "state": "Gujarat",
+        "education": "MBBS, MD (Oncology) - Gujarat Cancer Research Institute",
+        "work_experience": "12 years of experience in oncology, specializing in breast cancer and chemotherapy",
+        "reviews": [
+            "Dr. Joshi provided excellent care during my chemotherapy. - Arvind",
+            "Her expertise in oncology is truly remarkable. - Meenal",
+            "Very supportive and knowledgeable doctor. - Mohan",
+            "Dr. Joshi's approach to cancer treatment is very effective. - Geeta"
+        ],
+        "description": "Dr. Indira Joshi is a leading oncologist specializing in breast cancer and chemotherapy. Her extensive experience and compassionate care make her a trusted choice for cancer treatment."
+    },
+    {
+        "id": 10,
+        "name": "Dr. Jatin Singh",
+        "specialization": "Radiologist",
+        "image": "https://s3.envato.com/files/354413107/2072.jpg",
+        "address": "482 Palm Street, Jaipur, Rajasthan",
+        "rating": 94,
+        "consulting_fees": 2100,
+        "city": "Jaipur",
+        "state": "Rajasthan",
+        "education": "MBBS, MD (Radiology) - Sawai Man Singh Medical College, Jaipur",
+        "work_experience": "15 years of experience in radiology, specializing in diagnostic imaging and interventional radiology",
+        "reviews": [
+            "Dr. Singh's diagnostic skills are exceptional. - Harish",
+            "He provided accurate imaging results and excellent follow-up. - Rina",
+            "Very experienced and professional radiologist. - Deepak",
+            "Dr. Singh's reports were precise and timely. - Anju"
+        ],
+        "description": "Dr. Jatin Singh is a highly experienced radiologist specializing in diagnostic and interventional radiology. His expertise in imaging techniques ensures accurate diagnoses and effective treatments."
+    },
+    {
+        "id": 11,
+        "name": "Dr. Kiran Sharma",
+        "specialization": "Psychiatrist",
+        "image": "https://i.pinimg.com/736x/a6/78/c7/a678c77bd016467efa9508e6152d876d.jpg",
+        "address": "159 Elm Street, Noida, Uttar Pradesh",
+        "rating": 86,
+        "consulting_fees": 1550,
+        "city": "Noida",
+        "state": "Uttar Pradesh",
+        "education": "MBBS, MD (Psychiatry) - All India Institute of Medical Sciences (AIIMS), Delhi",
+        "work_experience": "8 years of experience in psychiatry, specializing in mood disorders and anxiety treatments",
+        "reviews": [
+            "Dr. Sharma has been instrumental in managing my anxiety. - Aarti",
+            "Her approach to mental health is very compassionate. - Sandeep",
+            "Very professional and helpful in addressing mental health issues. - Priya",
+            "Dr. Sharma's therapy sessions have been very effective. - Ravi"
+        ],
+        "description": "Dr. Kiran Sharma is a skilled psychiatrist with a focus on mood disorders and anxiety. Her empathetic approach and effective treatment strategies offer significant relief and support to her patients."
+    },
+    {
+        "id": 12,
+        "name": "Dr. Lakshmi Gupta",
+        "specialization": "Gastroenterologist",
+        "image": "https://media.istockphoto.com/id/1730222050/photo/photo-of-doctor-lady-smile-looking-at-camera-wear-stethoscope-white-uniform-isolate-white.jpg?s=612x612&w=0&k=20&c=KfZT1DzVMcGvHZZg4NnUhHwvOiI5xPYRe1AWvCwOqE4=",
+        "address": "258 Cedar Street, Ghaziabad, Uttar Pradesh",
+        "rating": 90,
+        "consulting_fees": 2000,
+        "city": "Ghaziabad",
+        "state": "Uttar Pradesh",
+        "education": "MBBS, MD (Gastroenterology) - King George's Medical University, Lucknow",
+        "work_experience": "10 years of experience in gastroenterology, specializing in digestive disorders and endoscopy",
+        "reviews": [
+            "Dr. Gupta's treatment for my digestive issues was very effective. - Raj",
+            "She is very knowledgeable and caring. - Suman",
+            "Great experience with her diagnostic skills. - Mehul",
+            "Dr. Gupta provided excellent care and follow-up. - Pooja"
+        ],
+        "description": "Dr. Lakshmi Gupta is a distinguished gastroenterologist with expertise in digestive disorders and endoscopy. Her extensive experience ensures precise diagnosis and effective treatment for various gastrointestinal conditions."
+    },
+    {
+        "id": 13,
+        "name": "Dr. Manoj Patel",
+        "specialization": "Pulmonologist",
+        "image": "https://static.vecteezy.com/system/resources/thumbnails/028/287/384/small_2x/a-mature-indian-male-doctor-on-a-white-background-ai-generated-photo.jpg",
+        "address": "369 Oak Street, Kanpur, Uttar Pradesh",
+        "rating": 89,
+        "consulting_fees": 1850,
+        "city": "Kanpur",
+        "state": "Uttar Pradesh",
+        "education": "MBBS, MD (Pulmonology) - GSVM Medical College, Kanpur",
+        "work_experience": "9 years of experience in pulmonology, specializing in asthma and chronic obstructive pulmonary disease (COPD)",
+        "reviews": [
+            "Dr. Patel's expertise in managing respiratory conditions is impressive. - Rajesh",
+            "He provided effective treatment for my asthma. - Neha",
+            "Very thorough and knowledgeable doctor. - Anil",
+            "Dr. Patel's care has greatly improved my lung function. - Meera"
+        ],
+        "description": "Dr. Manoj Patel is a highly skilled pulmonologist specializing in asthma and COPD. His extensive experience and patient-centered approach ensure effective management of respiratory conditions."
+    },
+    {
+        "id": 14,
+        "name": "Dr. Neeraj Rao",
+        "specialization": "Urologist",
+        "image": "https://img.freepik.com/free-photo/serious-confident-indian-male-doctor-reaching-hand-handshake-looking-camera_1262-14359.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1726012800&semt=ais_hybrid",
+        "address": "471 Maple Street, Lucknow, Uttar Pradesh",
+        "rating": 91,
+        "consulting_fees": 1950,
+        "city": "Lucknow",
+        "state": "Uttar Pradesh",
+        "education": "MBBS, MS (Urology) - King George's Medical University, Lucknow",
+        "work_experience": "11 years of experience in urology, specializing in kidney stones and prostate disorders",
+        "reviews": [
+            "Dr. Rao's treatment for my kidney stones was very effective. - Sandeep",
+            "He is very professional and attentive. - Pooja",
+            "Excellent care for urological issues. - Vikram",
+            "Dr. Rao provided great follow-up and support. - Aarti"
+        ],
+        "description": "Dr. Neeraj Rao is a distinguished urologist with expertise in kidney stones and prostate disorders. His extensive experience and commitment to patient care ensure effective management of urological conditions."
+    },
+    {
+        "id": 15,
+        "name": "Dr. Om Prakash",
+        "specialization": "Rheumatologist",
+        "image": "https://t4.ftcdn.net/jpg/01/85/39/55/360_F_185395570_wUzaCFaFP6Nm7NxWvk5xCMLAdh12nSCZ.jpg",
+        "address": "852 Cedar Street, Indore, Madhya Pradesh",
+        "rating": 88,
+        "consulting_fees": 1700,
+        "city": "Indore",
+        "state": "Madhya Pradesh",
+        "education": "MBBS, MD (Rheumatology) - Indore Medical College",
+        "work_experience": "8 years of experience in rheumatology, specializing in autoimmune diseases and arthritis",
+        "reviews": [
+            "Dr. Prakash's treatment for my arthritis has been very effective. - Ashok",
+            "He is very knowledgeable and patient. - Rekha",
+            "Excellent care and follow-up. - Manoj",
+            "Dr. Prakash's approach to managing autoimmune diseases is very thorough. - Neeta"
+        ],
+        "description": "Dr. Om Prakash is a dedicated rheumatologist specializing in autoimmune diseases and arthritis. His expertise and compassionate care offer significant relief and management for patients with rheumatic conditions."
+    },
+    {
+        "id": 16,
+        "name": "Dr. Priya Patel",
+        "specialization": "Hematologist",
+        "image": "https://t3.ftcdn.net/jpg/02/10/31/74/360_F_210317484_kPjac0EyuWs06pvAGMv2kxILJuhiABsk.jpg",
+        "address": "963 Pine Street, Mumbai, Maharashtra",
+        "rating": 92,
+        "consulting_fees": 2050,
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "education": "MBBS, MD (Hematology) - Tata Memorial Hospital, Mumbai",
+        "work_experience": "10 years of experience in hematology, specializing in blood disorders and leukemia",
+        "reviews": [
+            "Dr. Patel's treatment for my blood disorder was excellent. - Ramesh",
+            "Very caring and knowledgeable. - Anjali",
+            "Her expertise in hematology is outstanding. - Deepak",
+            "Dr. Patel provided great support throughout the treatment. - Seema"
+        ],
+        "description": "Dr. Priya Patel is a leading hematologist with expertise in blood disorders and leukemia. Her extensive experience and compassionate approach ensure effective treatment and support for her patients."
+    },
+    {
+        "id": 17,
+        "name": "Dr. Rajeev Bhatia",
+        "specialization": "Nephrologist",
+        "image": "https://previews.123rf.com/images/muralinathypr/muralinathypr1207/muralinathypr120700035/14907527-portrait-of-happy-indian-doctor.jpg",
+        "address": "741 Oak Street, Delhi, Delhi",
+        "rating": 91,
+        "consulting_fees": 1850,
+        "city": "Delhi",
+        "state": "Delhi",
+        "education": "MBBS, MD (Nephrology) - Delhi Medical College",
+        "work_experience": "12 years of experience in nephrology, specializing in kidney diseases and dialysis",
+        "reviews": [
+            "Dr. Bhatia's treatment for my kidney disease has been very effective. - Sanjay",
+            "He is very knowledgeable and provides excellent care. - Nisha",
+            "Dr. Bhatia's approach to dialysis is very comprehensive. - Ramesh",
+            "Great support and follow-up. - Meera"
+        ],
+        "description": "Dr. Rajeev Bhatia is a highly experienced nephrologist specializing in kidney diseases and dialysis. His comprehensive approach and expertise ensure effective management of renal conditions."
+    },
+    {
+        "id": 18,
+        "name": "Dr. Sandeep Kumar",
+        "specialization": "ENT Specialist",
+        "image": "https://st4.depositphotos.com/1017986/21088/i/450/depositphotos_210888716-stock-photo-happy-doctor-with-clipboard-at.jpg",
+        "address": "852 Birch Street, Kolkata, West Bengal",
+        "rating": 88,
+        "consulting_fees": 1750,
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "education": "MBBS, MS (ENT) - Calcutta National Medical College",
+        "work_experience": "9 years of experience in ENT, specializing in sinus and ear disorders",
+        "reviews": [
+            "Dr. Kumar is very knowledgeable and provided excellent care. - Anuradha",
+            "Effective treatment for my sinus issues. - Raj",
+            "He is very thorough and professional. - Suman",
+            "Dr. Kumar's approach to ENT problems is very effective. - Meena"
+        ],
+        "description": "Dr. Sandeep Kumar is a skilled ENT specialist with expertise in sinus and ear disorders. His thorough approach and extensive experience provide effective solutions for various ENT issues."
+    },
+    {
+        "id": 19,
+        "name": "Dr. Tara Sharma",
+        "specialization": "General Surgeon",
+        "image": "https://static.vecteezy.com/system/resources/previews/028/287/384/large_2x/a-mature-indian-male-doctor-on-a-white-background-ai-generated-photo.jpg",
+        "address": "963 Elm Street, Pune, Maharashtra",
+        "rating": 92,
+        "consulting_fees": 2000,
+        "city": "Pune",
+        "state": "Maharashtra",
+        "education": "MBBS, MS (General Surgery) - BJ Medical College, Pune",
+        "work_experience": "11 years of experience in general surgery, specializing in laparoscopic procedures",
+        "reviews": [
+            "Dr. Sharma's surgical skills are top-notch. - Ashok",
+            "She handled my surgery with great precision and care. - Priya",
+            "Very skilled and professional. - Sanjay",
+            "Dr. Sharma provided excellent post-operative care. - Meenal"
+        ],
+        "description": "Dr. Tara Sharma is a highly skilled general surgeon specializing in laparoscopic procedures. Her expertise and attention to detail ensure successful outcomes and comprehensive care."
+    },
+    {
+        "id": 20,
+        "name": "Dr. Umesh Agarwal",
+        "specialization": "Physiotherapist",
+        "image": "https://thumbs.dreamstime.com/b/indian-beautiful-female-doctor-18398918.jpg ",
+        "address": "789 Willow Street, Bengaluru, Karnataka",
+        "rating": 87,
+        "consulting_fees": 1600,
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "education": "BPT, MPT - Rajiv Gandhi University of Health Sciences",
+        "work_experience": "9 years of experience in physiotherapy, specializing in sports injuries and rehabilitation",
+        "reviews": [
+            "Dr. Agarwal's physiotherapy sessions have significantly improved my mobility. - Arjun",
+            "Very professional and knowledgeable. - Seema",
+            "Effective rehabilitation for my sports injury. - Ravi",
+            "Dr. Agarwal's approach to physiotherapy is excellent. - Neelam"
+        ],
+        "description": "Dr. Umesh Agarwal is a skilled physiotherapist specializing in sports injuries and rehabilitation. His extensive experience and personalized care help patients recover and regain mobility effectively."
+    }
+]

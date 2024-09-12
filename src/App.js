@@ -1,25 +1,51 @@
-import logo from './logo.svg';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Header from './Components/Header';
+
+import AppointmentPage from './Components/Appointment';
+import LoginPage from './Components/Login';
+import AboutPage from './Components/About';
+import ContactPage from './Components/Contact';
+import Footer from './Components/Footer';
+import LabTest from "./Components/LabTest";
+import Medicines from "./Components/Medicines";
+import DoctorProfilePage from "./Components/DoctorProfile";
+import { ToastContainer } from 'react-toastify';
+import './index.css';
 import './App.css';
 
+// Layout component that includes Header and Footer
+const Layout = ({ children }) => (
+    <>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+    </>
+);
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const routes = createBrowserRouter([
+        {
+            path: '/',
+            element: <Layout />,
+            children: [
+                { index: true, element: <AboutPage /> },
+                { path: 'appointment', element: <AppointmentPage /> },
+                { path: 'login', element: <LoginPage /> },
+                { path: 'about', element: <AboutPage /> },
+                { path: 'contact', element: <ContactPage /> },
+                { path: 'labTest', element: <LabTest /> },
+                { path: 'medicines', element: <Medicines /> },
+                { path: 'doctor/:id', element: <DoctorProfilePage /> }, // Add DoctorProfilePage route
+            ],
+        },
+    ]);
+
+    return (
+        <>
+            <RouterProvider router={routes} />
+            <ToastContainer />
+        </>
+    );
 }
 
 export default App;
