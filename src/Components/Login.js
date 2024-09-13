@@ -1,9 +1,12 @@
-// src/Components/LoginPage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// Mock storage
+const mockStorage = {
+    users: [],
+};
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
@@ -19,11 +22,14 @@ const LoginPage = () => {
             return;
         }
 
-
+        // Mock login logic
         const mockLogin = (email, password) => {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    if (email === 'user@example.com' && password === 'password') {
+                    const user = mockStorage.users.find(
+                        (user) => user.email === email && user.password === password
+                    );
+                    if (user) {
                         resolve(true);
                     } else {
                         reject(new Error('Invalid email or password'));
@@ -50,9 +56,17 @@ const LoginPage = () => {
 
         // Mock signup logic
         const mockSignup = (email, password) => {
-            return new Promise((resolve) => {
+            return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    resolve(true);
+                    const userExists = mockStorage.users.some(
+                        (user) => user.email === email
+                    );
+                    if (userExists) {
+                        reject(new Error('User already registered'));
+                    } else {
+                        mockStorage.users.push({ email, password });
+                        resolve(true);
+                    }
                 }, 1000);
             });
         };
@@ -60,25 +74,26 @@ const LoginPage = () => {
         try {
             await mockSignup(email, password);
             toast.success('Account created successfully! Please log in.');
-            setIsSignup(false);
+            setIsSignup(false); // Switch to login mode
+            setEmail(''); // Clear email field
+            setPassword(''); // Clear password field
         } catch (error) {
-            toast.error('Failed to create an account');
+            toast.error(error.message);
         }
     };
 
     return (
         <div className="flex h-screen">
-
             <div className="hidden md:flex md:w-1/2 group">
                 <img
                     src="https://img.freepik.com/premium-vector/online-doctor-concept-doctor-appointment-modern-healthcare-technologies-vector-illustration-flat_186332-1091.jpg"
                     alt="Login"
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                    style={{transform: 'scale(0.8)'}} // Scale down the image initially
+                    style={{ transform: 'scale(0.8)' }} // Scale down the image initially
                 />
             </div>
 
-            <div className="w-full md:w-1/2 flex justify-center items-center ">
+            <div className="w-full md:w-1/2 flex justify-center items-center">
                 <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
                     <h2 className="text-2xl font-bold text-gray-600 mb-6 text-center">
                         {isSignup ? 'Sign Up' : 'Login'}

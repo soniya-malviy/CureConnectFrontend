@@ -6,12 +6,7 @@ const Header = () => {
         <>
             <header
                 className="bg-white text-black py-4 shadow-lg"
-                style={{
-                    backgroundImage: 'url()',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat'
-                }}
+               
             >
                 <div className="container mx-auto flex items-center justify-between px-4">
                     <NavLink to="/about" className="flex items-center">

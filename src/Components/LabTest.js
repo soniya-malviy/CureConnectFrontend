@@ -81,7 +81,7 @@ const LabTest = () => {
                                         <h3 className="text-xl font-semibold mb-2">{test.test_type}</h3>
                                         <p className="text-gray-600 mb-2"><strong>Organ:</strong> {test.organ}</p>
                                         <p className="text-gray-600 mb-2"><strong>Description:</strong> {test.description}</p>
-                                        <p className="text-gray-600 mb-4"><strong>Dosage:</strong> {test.dosage}</p>
+
                                         <button
                                             onClick={(e) => {
                                                 e.stopPropagation();

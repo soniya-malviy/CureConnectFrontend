@@ -9,10 +9,18 @@ const DoctorProfilePage = () => {
     const [selectedTime, setSelectedTime] = useState('');
     const [isPopupVisible, setIsPopupVisible] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+    const [newReview, setNewReview] = useState('');
+    const [reviewerName, setReviewerName] = useState('');
 
     useEffect(() => {
         const doctorData = doctors.find(doc => doc.id === parseInt(id));
-        setDoctor(doctorData);
+        if (doctorData) {
+            // Set only one review initially
+            setDoctor({
+                ...doctorData,
+                reviews: doctorData.reviews.slice(0, 1) // Take only the first review
+            });
+        }
     }, [id]);
 
     const handleDateChange = (e) => {
@@ -38,7 +46,30 @@ const DoctorProfilePage = () => {
         setSelectedTime('');
     };
 
-    if (!doctor) return <div>Loading...</div>;
+    const handleAddReview = () => {
+        if (!newReview || !reviewerName) {
+            setErrorMessage('Both review and reviewer name are required.');
+            return;
+        }
+        setErrorMessage('');
+        const updatedDoctor = {
+            ...doctor,
+            reviews: [...doctor.reviews, { review: newReview, reviewer: reviewerName, date: new Date().toLocaleDateString() }]
+        };
+        setDoctor(updatedDoctor);
+        setNewReview('');
+        setReviewerName('');
+    };
+
+    const handleDeleteReview = (index) => {
+        const updatedDoctor = {
+            ...doctor,
+            reviews: doctor.reviews.filter((_, i) => i !== index)
+        };
+        setDoctor(updatedDoctor);
+    };
+
+    if (!doctor) return <div className="flex items-center justify-center min-h-screen">Loading...</div>;
 
     return (
         <div className="flex min-h-screen">
@@ -65,13 +96,55 @@ const DoctorProfilePage = () => {
                             <p className="text-gray-800 mb-2"><strong>Education:</strong> {doctor.education}</p>
                             <p className="text-gray-800 mb-2"><strong>Work Experience:</strong> {doctor.work_experience}</p>
                             <h4 className="text-xl font-semibold text-gray-800 mb-2">Reviews</h4>
-                            <ul className="list-disc pl-5">
-                                {doctor.reviews.map((review, index) => (
-                                    <li key={index} className="mb-2 text-gray-700">"{review}"</li>
-                                ))}
-                            </ul>
+                            <div className="space-y-4">
+                                {doctor.reviews.length > 0 ? (
+                                    doctor.reviews.map((review, index) => (
+                                        <div key={index} className="p-4 bg-white rounded-lg shadow-md border border-gray-200">
+                                            <p className="text-gray-800 mb-2"><strong>{review.reviewer}</strong> - <span className="text-gray-500">{review.date}</span></p>
+                                            <p className="text-gray-700 mb-2">"{review.review}"</p>
+                                            <button
+                                                onClick={() => handleDeleteReview(index)}
+                                                className="text-red-500 mt-2 hover:underline"
+                                            >
+                                                Delete
+                                            </button>
+                                        </div>
+                                    ))
+                                ) : (
+                                    <p className="text-gray-500">No reviews yet. Be the first to leave a review!</p>
+                                )}
+                            </div>
                         </div>
                     </div>
+                </div>
+                {/* Add Review Form */}
+                <div className="bg-white p-6 rounded-lg shadow-md mt-6">
+                    <h4 className="text-xl font-semibold text-gray-800 mb-4">Add a Review</h4>
+                    {errorMessage && <p className="text-red-500 mb-4">{errorMessage}</p>}
+                    <div className="mb-4">
+                        <label className="block text-gray-700 mb-2">Your Name</label>
+                        <input
+                            type="text"
+                            value={reviewerName}
+                            onChange={(e) => setReviewerName(e.target.value)}
+                            className="w-full p-2 border border-gray-300 rounded"
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-gray-700 mb-2">Your Review</label>
+                        <textarea
+                            value={newReview}
+                            onChange={(e) => setNewReview(e.target.value)}
+                            rows="4"
+                            className="w-full p-2 border border-gray-300 rounded"
+                        />
+                    </div>
+                    <button
+                        onClick={handleAddReview}
+                        className="w-full bg-theme-dark-blue text-white p-2 rounded"
+                    >
+                        Add Review
+                    </button>
                 </div>
             </div>
 

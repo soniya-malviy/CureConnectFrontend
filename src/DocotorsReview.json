@@ -1,0 +1,74 @@
+{
+  "reviews": [
+    {
+      "doctor_id": "D001",
+      "name": "Dr. Jane Smith",
+      "specialty": "Cardiologist",
+      "rating": 4.5,
+      "review_text": "CureConnect has streamlined the appointment scheduling process remarkably well. The interface is user-friendly and the integration with my calendar is seamless. However, I would appreciate more customization options for appointment types."
+    },
+    {
+      "doctor_id": "D002",
+      "name": "Dr. John Doe",
+      "specialty": "Dermatologist",
+      "rating": 4.0,
+      "review_text": "Overall, CureConnect is a solid platform for managing patient appointments. The reminders and notifications are helpful. My only concern is the occasional downtime which can be inconvenient."
+    },
+    {
+      "doctor_id": "D003",
+      "name": "Dr. Emily Johnson",
+      "specialty": "Pediatrician",
+      "rating": 5.0,
+      "review_text": "I love how CureConnect simplifies the booking process for both me and my patients. The customer support is excellent and the platform is very reliable. It's made managing my schedule much easier."
+    },
+    {
+      "doctor_id": "D004",
+      "name": "Dr. Michael Brown",
+      "specialty": "Orthopedic Surgeon",
+      "rating": 3.5,
+      "review_text": "CureConnect is decent, but there are some areas for improvement. The system sometimes glitches and the reporting features could be more detailed. It’s functional, but there’s room for enhancement."
+    },
+    {
+      "doctor_id": "D005",
+      "name": "Dr. Lisa White",
+      "specialty": "General Practitioner",
+      "rating": 4.2,
+      "review_text": "The platform is generally good for managing appointments, though I find the user interface a bit cluttered. The integration with electronic health records (EHR) is a huge plus and the scheduling flexibility is appreciated."
+    },
+    {
+      "doctor_id": "D006",
+      "name": "Dr. Alan Green",
+      "specialty": "Endocrinologist",
+      "rating": 4.8,
+      "review_text": "CureConnect is an excellent tool for managing my practice. The appointment reminders reduce no-shows significantly, and the patient management features are very intuitive. I would like to see better analytics tools in future updates."
+    },
+    {
+      "doctor_id": "D007",
+      "name": "Dr. Sarah Miller",
+      "specialty": "Neurologist",
+      "rating": 4.1,
+      "review_text": "The platform works well overall. It’s easy to navigate and helps keep track of patient appointments efficiently. Occasionally, I experience slow load times which can be frustrating, but it's generally reliable."
+    },
+    {
+      "doctor_id": "D008",
+      "name": "Dr. Robert Lee",
+      "specialty": "Oncologist",
+      "rating": 4.6,
+      "review_text": "CureConnect has been a great asset for my oncology practice. The ease of booking and patient reminders are top-notch. The only drawback is the limited customization options for appointment types."
+    },
+    {
+      "doctor_id": "D009",
+      "name": "Dr. Patricia Davis",
+      "specialty": "Gynecologist",
+      "rating": 4.3,
+      "review_text": "I appreciate the user-friendly interface and efficient scheduling features. However, it would be beneficial if the platform offered more advanced filtering options for appointment types."
+    },
+    {
+      "doctor_id": "D010",
+      "name": "Dr. William Wilson",
+      "specialty": "Urologist",
+      "rating": 3.9,
+      "review_text": "CureConnect is functional and provides the basics needed for appointment management. It’s not the most innovative platform, but it gets the job done. Improvements could be made in terms of system speed and customer support response times."
+    }
+  ]
+}
