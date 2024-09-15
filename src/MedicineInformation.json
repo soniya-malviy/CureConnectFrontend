@@ -6,7 +6,7 @@
     "price": 10.0,
     "organ_use_for": "Pain relief and fever management",
     "dosage": "500 mg every 4-6 hours as needed. Maximum 4 grams per day.",
-    "description": "Paracetamol is used to treat mild to moderate pain and to reduce fever. It is often used for headaches, muscle aches, arthritis, backaches, toothaches, colds, and fevers.",
+    "description": "Used to treat mild to moderate pain and reduce fever; effective for headaches, muscle aches, and arthritis.",
     "image_url": "https://5.imimg.com/data5/SELLER/Default/2022/8/QM/AX/SS/129887935/paracetamol-tablets.jpeg"
   },
   {
@@ -16,7 +16,7 @@
     "price": 30.0,
     "organ_use_for": "Respiratory tract infections, ear infections, skin infections",
     "dosage": "250-500 mg every 8 hours for 7-10 days.",
-    "description": "Amoxicillin is a penicillin antibiotic that fights bacteria in the body. It is used to treat a variety of infections including pneumonia, bronchitis, and infections of the ear, nose, throat, skin, or urinary tract.",
+    "description": "A penicillin antibiotic used to treat various bacterial infections, including pneumonia and bronchitis.",
     "image_url": "https://5.imimg.com/data5/ANDROID/Default/2023/4/302037696/HU/JI/VN/116627000/product-jpeg-500x500.jpg"
   },
   {
@@ -26,7 +26,7 @@
     "price": 20.0,
     "organ_use_for": "Type 2 diabetes",
     "dosage": "500-1000 mg twice daily with meals. Maximum 2 grams per day.",
-    "description": "Metformin is used to improve blood sugar control in adults with type 2 diabetes. It works by helping to restore the body’s proper response to the insulin it naturally produces.",
+    "description": "Improves blood sugar control in type 2 diabetes by enhancing the body’s response to insulin.",
     "image_url": "https://5.imimg.com/data5/SELLER/Default/2023/8/332774949/NY/WA/ZJ/6299000/metformin-hydrochloride-tablets.jpeg"
   },
   {
@@ -36,7 +36,7 @@
     "price": 25.0,
     "organ_use_for": "Cardiovascular system",
     "dosage": "10-40 mg once daily.",
-    "description": "Lisinopril is an ACE inhibitor that works by relaxing blood vessels so blood can flow more easily. It is used to treat high blood pressure and heart failure, and to improve survival after heart attacks.",
+    "description": "An ACE inhibitor used to lower blood pressure and treat heart failure by relaxing blood vessels.",
     "image_url": "https://5.imimg.com/data5/ANDROID/Default/2023/6/320547060/DO/SP/MX/11121653/product-jpeg.jpg"
   },
   {
@@ -46,7 +46,7 @@
     "price": 15.0,
     "organ_use_for": "Pain relief and inflammation reduction",
     "dosage": "200-400 mg every 4-6 hours as needed. Maximum 1200 mg per day.",
-    "description": "Ibuprofen is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce fever, pain, and inflammation. It is commonly used for conditions like headaches, toothaches, menstrual cramps, and arthritis.",
+    "description": "NSAID used to reduce fever, pain, and inflammation, effective for headaches and arthritis.",
     "image_url": "https://5.imimg.com/data5/SELLER/Default/2023/6/319597573/MH/NE/SR/135658020/ibuprofen-400-mg-bp-tablets.jpg"
   },
   {
@@ -56,7 +56,7 @@
     "price": 12.0,
     "organ_use_for": "Pain relief, cardiovascular protection",
     "dosage": "325-650 mg every 4-6 hours as needed. Maximum 4 grams per day.",
-    "description": "Aspirin is used to reduce pain, fever, and inflammation. It also helps reduce the risk of heart attacks and strokes by inhibiting platelet aggregation.",
+    "description": "Reduces pain, fever, inflammation, and risk of heart attacks by inhibiting platelet aggregation.",
     "image_url": "https://5.imimg.com/data5/SELLER/Default/2023/7/330506870/UM/GZ/QO/135658020/aspirin-dispersible-tablets.jpg"
   },
   {
@@ -66,7 +66,7 @@
     "price": 35.0,
     "organ_use_for": "Cardiovascular system",
     "dosage": "10-80 mg once daily.",
-    "description": "Atorvastatin is used to lower cholesterol and triglyceride levels in the blood. It helps prevent heart attacks, strokes, and other cardiovascular diseases.",
+    "description": "Lowers cholesterol and triglyceride levels to help prevent cardiovascular diseases.",
     "image_url": "https://5.imimg.com/data5/SELLER/Default/2023/7/325710235/RG/XA/JU/74349057/atorvastatin-10-mg.jpg"
   },
   {
@@ -76,7 +76,7 @@
     "price": 18.0,
     "organ_use_for": "Gastrointestinal tract",
     "dosage": "20-40 mg once daily before a meal.",
-    "description": "Omeprazole is used to treat gastroesophageal reflux disease (GERD) and other conditions involving excessive stomach acid. It works by reducing the amount of acid produced in the stomach.",
+    "description": "Treats GERD and excessive stomach acid by reducing acid production in the stomach.",
     "image_url": "https://www.adegenpharma.com/wp-content/uploads/2023/02/OMILESS-20-CAPSULE.jpg"
   },
   {
@@ -86,7 +86,7 @@
     "price": 22.0,
     "organ_use_for": "Cardiovascular system, kidneys",
     "dosage": "12.5-50 mg once daily.",
-    "description": "Hydrochlorothiazide is a diuretic used to treat high blood pressure and fluid retention. It works by helping the body eliminate excess fluid and sodium.",
+    "description": "Treats high blood pressure and fluid retention by helping the body eliminate excess fluid.",
     "image_url": "https://5.imimg.com/data5/SELLER/Default/2022/11/PV/BY/YK/23808697/hydrochlorothiazide-tablet-12-5mg-25mg.JPG"
   },
   {
@@ -96,7 +96,7 @@
     "price": 14.0,
     "organ_use_for": "Respiratory system",
     "dosage": "10 mg once daily.",
-    "description": "Cetirizine is an antihistamine used to relieve allergy symptoms such as sneezing, runny nose, and itchy eyes. It works by blocking the action of histamine, a substance that causes allergic reactions.",
+    "description": "Relieves allergy symptoms such as sneezing and itchy eyes by blocking histamine.",
     "image_url": "https://www.hlhealthcare.co.in/wp-content/uploads/2024/07/CET-HL-Tab-scaled.jpg"
   },
   {
@@ -106,7 +106,7 @@
     "price": 28.0,
     "organ_use_for": "Endocrine system",
     "dosage": "25-200 mcg once daily.",
-    "description": "Levothyroxine is used to replace or supplement thyroid hormone in the body. It is used to treat hypothyroidism (underactive thyroid).",
+    "description": "Replaces thyroid hormone in the body to treat hypothyroidism (underactive thyroid).",
     "image_url": "https://images.apollo247.in/pub/media/catalog/product/L/E/LET0022_1_1.jpg"
   },
   {
@@ -116,7 +116,7 @@
     "price": 16.0,
     "organ_use_for": "Respiratory system",
     "dosage": "10-20 mg every 4 hours as needed. Maximum 120 mg per day.",
-    "description": "Dextromethorphan is used to relieve cough caused by the common cold or other respiratory conditions. It works by suppressing the cough reflex in the brain.",
+    "description": "Suppresses cough caused by colds or other respiratory conditions by affecting the cough reflex in the brain.",
     "image_url": "https://5.imimg.com/data5/SELLER/Default/2022/11/LX/CD/IW/66023219/dextromethorphan-hbr-phenylephrine-hcl-and-chlorpheniramine-maleate-syrup.jpg"
   },
   {
@@ -126,7 +126,7 @@
     "price": 40.0,
     "organ_use_for": "Cardiovascular system",
     "dosage": "75 mg once daily.",
-    "description": "Clopidogrel is used to prevent blood clots in patients with heart disease or stroke. It works by preventing platelets in the blood from sticking together.",
+    "description": "Prevents blood clots by inhibiting platelet aggregation in patients with heart disease or stroke.",
     "image_url": "https://5.imimg.com/data5/SELLER/Default/2022/12/NO/JQ/BE/129074500/clopilet-clopidogrel-tablets-500x500.jpg"
   },
   {
@@ -136,7 +136,7 @@
     "price": 50.0,
     "organ_use_for": "Nervous system",
     "dosage": "300-600 mg three times daily.",
-    "description": "Gabapentin is used to treat nerve pain and seizures. It works by affecting the way nerves send messages to the brain.",
+    "description": "Treats nerve pain and seizures by affecting nerve message transmission to the brain.",
     "image_url": "https://domf5oio6qrcr.cloudfront.net/medialibrary/15077/conversions/85ed33af-9f7f-4c9b-ae70-e072a8056d37-thumb.jpg"
   },
   {
@@ -146,7 +146,7 @@
     "price": 27.0,
     "organ_use_for": "Immune system, inflammation",
     "dosage": "5-60 mg once daily depending on the condition.",
-    "description": "Prednisone is a corticosteroid used to reduce inflammation and suppress the immune system. It is used to treat conditions such as arthritis, asthma, and autoimmune diseases.",
+    "description": "Reduces inflammation and suppresses the immune system to treat conditions like arthritis and asthma.",
     "image_url": "https://www.hss.edu/images/socialmedia/corticosteroid-prednisone-tablets-1200x628.jpg"
   },
   {
@@ -156,7 +156,7 @@
     "price": 32.0,
     "organ_use_for": "Central nervous system",
     "dosage": "5-10 mg before bedtime.",
-    "description": "Zolpidem is used to treat insomnia and improve sleep. It works by affecting chemicals in the brain that may be unbalanced in people with sleep problems.",
+    "description": "Treats insomnia and improves sleep by affecting brain chemicals.",
     "image_url": "https://5.imimg.com/data5/SELLER/Default/2024/6/430178022/CY/DG/WE/223271731/zolpidem-tartrate.jpg"
   },
   {
@@ -166,7 +166,7 @@
     "price": 38.0,
     "organ_use_for": "Urinary tract",
     "dosage": "0.4 mg once daily after a meal.",
-    "description": "Tamsulosin is used to treat symptoms of BPH, such as difficulty urinating. It works by relaxing muscles in the prostate and bladder neck.",
+    "description": "Relieves symptoms of BPH by relaxing muscles in the prostate and bladder neck.",
     "image_url": "https://5.imimg.com/data5/SELLER/Default/2024/3/400265068/DR/KS/DX/110428227/tamsulosin-hydrochloride-tablet.jpg"
   },
   {
@@ -176,7 +176,7 @@
     "price": 19.0,
     "organ_use_for": "Gastrointestinal tract",
     "dosage": "150 mg twice daily.",
-    "description": "Ranitidine is used to reduce stomach acid and treat conditions like GERD and ulcers. It works by blocking histamine receptors in the stomach lining.",
+    "description": "Reduces stomach acid and treats GERD and ulcers by blocking histamine receptors in the stomach.",
     "image_url": "https://5.imimg.com/data5/SELLER/Default/2022/7/CD/MN/UA/147460468/ranitidine-150mg-.jpg"
   },
   {
@@ -186,7 +186,7 @@
     "price": 33.0,
     "organ_use_for": "Cardiovascular system",
     "dosage": "10-80 mg once daily in the evening.",
-    "description": "Simvastatin is used to lower cholesterol and triglyceride levels in the blood. It helps prevent heart attacks and strokes.",
+    "description": "Lowers cholesterol and triglyceride levels to help prevent heart attacks and strokes.",
     "image_url": "https://5.imimg.com/data5/SELLER/Default/2023/10/357085613/HL/RR/GE/50963842/simvastatin-tablet-ups-20-mg.jpg"
   },
   {
@@ -196,7 +196,7 @@
     "price": 45.0,
     "organ_use_for": "Central nervous system",
     "dosage": "2-6 mg per day in divided doses.",
-    "description": "Lorazepam is used to treat anxiety and anxiety-related disorders. It works by affecting chemicals in the brain to produce a calming effect.",
+    "description": "Treats anxiety and related disorders by producing a calming effect on the brain.",
     "image_url": "https://5.imimg.com/data5/SELLER/Default/2023/6/314504223/AN/UT/ZU/149742060/lorazepam-tablets-2-mg.jpg"
   }
 ]
