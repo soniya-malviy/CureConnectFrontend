@@ -35,11 +35,11 @@ const Medicines = () => {
     );
 
     return (
-        <div className="flex min-h-screen bg-gray-100">
+        <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
             {/* Medicines Section */}
-            <div className="flex-1 p-8">
+            <div className="flex-1 p-4 lg:p-8">
                 {/* Search Bar */}
-                <div className="max-w-4xl mx-auto mb-8">
+                <div className="max-w-md mx-auto mb-8">
                     <input
                         type="text"
                         placeholder="Search by medicine name..."
@@ -50,13 +50,13 @@ const Medicines = () => {
                 </div>
 
                 {/* Medicine Cards */}
-                <div className="flex flex-wrap -mx-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {filteredMedicines.map((medicine) => (
-                        <div key={medicine.id} className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
+                        <div key={medicine.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                             <div className="relative w-full h-80">
                                 <div className="absolute inset-0 flip-card">
                                     <div className="flip-card-inner">
-                                        <div className="flip-card-front bg-white rounded-lg shadow-md p-4 flex flex-col h-full">
+                                        <div className="flip-card-front bg-white rounded-lg p-4 flex flex-col h-full">
                                             <img
                                                 src={medicine.image_url}
                                                 alt={medicine.medicine_name}
@@ -66,7 +66,7 @@ const Medicines = () => {
                                             <p className="text-gray-600">Price: ₹{medicine.price}</p>
                                             <p className="text-gray-600">Usage: {medicine.usage}</p>
                                         </div>
-                                        <div className="flip-card-back bg-white rounded-lg shadow-md p-4 flex flex-col h-full">
+                                        <div className="flip-card-back bg-white rounded-lg p-4 flex flex-col h-full">
                                             <p className="text-gray-800 mb-2"><strong>Organ Use For:</strong> {medicine.organ_use_for}</p>
                                             <p className="text-gray-800 mb-2"><strong>Dosage:</strong> {medicine.dosage}</p>
                                             <p className="text-gray-800 mb-4"><strong>Description:</strong> {medicine.description}</p>
@@ -86,7 +86,7 @@ const Medicines = () => {
             </div>
 
             {/* Cart Section */}
-            <div className="w-80 p-8 bg-white shadow-lg">
+            <div className="w-full lg:w-80 p-4 lg:p-8 bg-white shadow-lg">
                 <h2 className="text-xl font-bold mb-4">Shopping Cart</h2>
                 <ul className="space-y-4">
                     {cart.length === 0 ? (

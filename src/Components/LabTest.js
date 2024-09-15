@@ -26,12 +26,12 @@ const LabTest = () => {
     );
 
     return (
-        <div className="flex min-h-screen bg-gray-100">
+        <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
             {/* Lab Tests Section */}
-            <div className="flex-1 p-8">
-                <h2 className="text-3xl font-bold mb-6 text-center text-theme-dark-blue">Available Lab Tests</h2>
+            <div className="flex-1 p-4 lg:p-8">
+                <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-center text-theme-dark-blue">Available Lab Tests</h2>
                 <div className="mb-6 flex justify-center">
-                    <div className="relative w-full max-w-lg">
+                    <div className="relative w-full max-w-md lg:max-w-lg">
                         <input
                             type="text"
                             placeholder="Filter by test type"
@@ -50,7 +50,7 @@ const LabTest = () => {
                         )}
                     </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {filteredTests.map((test, index) => (
                         <div
                             key={test.test_id}
@@ -62,8 +62,8 @@ const LabTest = () => {
                             >
                                 <div className="flip-card-inner w-full h-full transition-transform duration-600 transform-style-preserve-3d">
                                     {/* Front Side */}
-                                    <div className="flip-card-front bg-white shadow-lg rounded-lg p-6 border border-gray-300 flex flex-col items-center justify-between">
-                                        <h3 className="text-2xl font-semibold mb-2">{test.test_type}</h3>
+                                    <div className="flip-card-front bg-white shadow-lg rounded-lg p-4 border border-gray-300 flex flex-col items-center justify-between">
+                                        <h3 className="text-xl lg:text-2xl font-semibold mb-2">{test.test_type}</h3>
                                         <p className="text-gray-600 mb-1"><strong>Location:</strong> {test.location}</p>
                                         <p className="text-gray-600 mb-4"><strong>Price:</strong> ₹{test.price}</p>
                                         {/*<button*/}
@@ -77,8 +77,8 @@ const LabTest = () => {
                                         {/*</button>*/}
                                     </div>
                                     {/* Back Side */}
-                                    <div className="flip-card-back bg-gray-100 shadow-lg rounded-lg p-6 border border-gray-300 flex flex-col items-center justify-center text-center">
-                                        <h3 className="text-xl font-semibold mb-2">{test.test_type}</h3>
+                                    <div className="flip-card-back bg-gray-100 shadow-lg rounded-lg p-4 border border-gray-300 flex flex-col items-center justify-center text-center">
+                                        <h3 className="text-xl lg:text-2xl font-semibold mb-2">{test.test_type}</h3>
                                         <p className="text-gray-600 mb-2"><strong>Organ:</strong> {test.organ}</p>
                                         <p className="text-gray-600 mb-2"><strong>Description:</strong> {test.description}</p>
 
@@ -100,8 +100,8 @@ const LabTest = () => {
             </div>
 
             {/* Cart Section */}
-            <div className="w-full lg:w-1/4 p-8 bg-white shadow-md rounded-lg border border-gray-300">
-                <h2 className="text-3xl font-bold mb-4 text-theme-dark-blue">Cart</h2>
+            <div className="w-full lg:w-1/4 p-4 lg:p-8 bg-white shadow-md rounded-lg border border-gray-300">
+                <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-theme-dark-blue">Cart</h2>
                 <div className="space-y-4">
                     {cart.length > 0 ? (
                         <ul className="space-y-4">

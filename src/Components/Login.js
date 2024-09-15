@@ -12,6 +12,7 @@ const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isSignup, setIsSignup] = useState(false); // Toggle between login and signup
+    const [loggedIn, setLoggedIn] = useState(false); // Track login status
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
@@ -40,7 +41,8 @@ const LoginPage = () => {
 
         try {
             await mockLogin(email, password);
-            navigate('/about');
+            setLoggedIn(true); // Set logged in status
+            navigate('/profile'); // Redirect to profile after login
         } catch (error) {
             toast.error(error.message);
         }
@@ -155,6 +157,16 @@ const LoginPage = () => {
                             )}
                         </p>
                     </form>
+                    {loggedIn && (
+                        <div className="mt-4 text-center">
+                            <button
+                                onClick={() => navigate('/profile')} // Redirect to user profile page
+                                className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                            >
+                                User Profile
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
