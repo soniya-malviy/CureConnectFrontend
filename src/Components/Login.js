@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { useUser } from './user'; // Import the UserContext
 import 'react-toastify/dist/ReactToastify.css';
 
 // Mock storage
@@ -9,10 +10,10 @@ const mockStorage = {
 };
 
 const LoginPage = () => {
+    const { login } = useUser(); // Get login function from context
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isSignup, setIsSignup] = useState(false); // Toggle between login and signup
-    const [loggedIn, setLoggedIn] = useState(false); // Track login status
+    const [isSignup, setIsSignup] = useState(false);
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
@@ -23,7 +24,6 @@ const LoginPage = () => {
             return;
         }
 
-        // Mock login logic
         const mockLogin = (email, password) => {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
@@ -41,8 +41,8 @@ const LoginPage = () => {
 
         try {
             await mockLogin(email, password);
-            setLoggedIn(true); // Set logged in status
-            navigate('/profile'); // Redirect to profile after login
+            login(); // Mark user as logged in
+            navigate('/userprofile'); // Redirect to profile after login
         } catch (error) {
             toast.error(error.message);
         }
@@ -56,7 +56,6 @@ const LoginPage = () => {
             return;
         }
 
-        // Mock signup logic
         const mockSignup = (email, password) => {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
@@ -76,9 +75,9 @@ const LoginPage = () => {
         try {
             await mockSignup(email, password);
             toast.success('Account created successfully! Please log in.');
-            setIsSignup(false); // Switch to login mode
-            setEmail(''); // Clear email field
-            setPassword(''); // Clear password field
+            setIsSignup(false);
+            setEmail('');
+            setPassword('');
         } catch (error) {
             toast.error(error.message);
         }
@@ -91,7 +90,7 @@ const LoginPage = () => {
                     src="https://img.freepik.com/premium-vector/online-doctor-concept-doctor-appointment-modern-healthcare-technologies-vector-illustration-flat_186332-1091.jpg"
                     alt="Login"
                     className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-                    style={{ transform: 'scale(0.8)' }} // Scale down the image initially
+                    style={{ transform: 'scale(0.8)' }}
                 />
             </div>
 
@@ -157,16 +156,6 @@ const LoginPage = () => {
                             )}
                         </p>
                     </form>
-                    {loggedIn && (
-                        <div className="mt-4 text-center">
-                            <button
-                                onClick={() => navigate('/profile')} // Redirect to user profile page
-                                className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                            >
-                                User Profile
-                            </button>
-                        </div>
-                    )}
                 </div>
             </div>
         </div>

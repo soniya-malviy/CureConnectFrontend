@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Header from './Components/Header';
-import User from './Components/user';
+import { UserProvider } from './Components/user';
+import { CartProvider } from './Components/CartContext'; // Import the Cart provider
 import AppointmentPage from './Components/Appointment';
 import LoginPage from './Components/Login';
 import AboutPage from './Components/About';
@@ -9,6 +10,8 @@ import Footer from './Components/Footer';
 import LabTest from "./Components/LabTest";
 import Medicines from "./Components/Medicines";
 import DoctorProfilePage from "./Components/DoctorProfile";
+import UserProfile from "./Components/userProfile";
+import Cart from "./Components/cart"; // Import Cart component
 import { ToastContainer } from 'react-toastify';
 import './index.css';
 import './App.css';
@@ -36,16 +39,19 @@ function App() {
                 { path: 'labTest', element: <LabTest /> },
                 { path: 'medicines', element: <Medicines /> },
                 { path: 'doctor/:id', element: <DoctorProfilePage /> },
-                {path:'profile', element:<User/>}
+                { path: 'userprofile', element: <UserProfile /> },
+                { path: 'cart', element: <Cart /> } // Add Cart route
             ],
         },
     ]);
 
     return (
-        <>
-            <RouterProvider router={routes} />
-            <ToastContainer />
-        </>
+        <UserProvider>
+            <CartProvider> {/* Wrap RouterProvider with CartProvider */}
+                <RouterProvider router={routes} />
+                <ToastContainer />
+            </CartProvider>
+        </UserProvider>
     );
 }
 

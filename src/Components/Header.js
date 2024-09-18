@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import LOGO from '../assets/LOGO.jpeg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,25 +43,30 @@ const Header = () => {
 
                     {/* Navigation Links */}
                     <nav className={`lg:flex lg:items-center lg:space-x-4 ${isMenuOpen ? 'block' : 'hidden lg:block'}`}>
-                        <NavLink to="/about" className="block py-2 px-4 text-black hover:text-theme-color">
+                        <NavLink to="/about" className="block py-2 px-4 text-black hover:text-theme-dark-blue">
                             About Us
                         </NavLink>
-                        <NavLink to="/appointment" className="block py-2 px-4 text-black hover:text-theme-color">
+                        <NavLink to="/appointment" className="block py-2 px-4 text-black hover:text-theme-dark-blue">
                             Appointment Booking
                         </NavLink>
-                        <NavLink to="/labtest" className="block py-2 px-4 text-black hover:text-theme-color">
+                        <NavLink to="/labtest" className="block py-2 px-4 text-black hover:text-theme-dark-blue">
                             Lab Test
                         </NavLink>
-                        <NavLink to="/medicines" className="block py-2 px-4 text-black hover:text-theme-color">
+                        <NavLink to="/medicines" className="block py-2 px-4 text-black hover:text-theme-dark-blue">
                             Medicines
                         </NavLink>
-                        <NavLink to="/login" className="block py-2 px-4 text-black hover:text-theme-color">
+                        <NavLink to="/login" className="block py-2 px-4 text-black hover:text-theme-dark-blue">
                             Login
+                        </NavLink>
+                        <NavLink to="/cart"
+                                 className="flex items-center py-2 px-4 text-black hover:text-theme-dark-blue">
+                            <FontAwesomeIcon icon={faShoppingCart} className="h-6 w-6 mr-2"/>
+                            Cart
                         </NavLink>
                     </nav>
                 </div>
             </header>
-            <Outlet />
+            <Outlet/>
         </>
     );
 };
