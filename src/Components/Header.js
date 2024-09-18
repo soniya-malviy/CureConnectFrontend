@@ -11,14 +11,14 @@ const Header = () => {
 
     return (
         <>
-            <header className="bg-white text-black py-6 shadow-lg">
+            <header className="bg-[rgba(255,255,255,0.3)] text-black py-4 shadow-lg">
                 <div className="container mx-auto flex items-center justify-between px-4">
                     {/* Logo */}
                     <NavLink to="/about" className="flex items-center">
                         <img
                             src={LOGO}
                             alt="website-logo"
-                            className="h-20 w-[250px] lg:w-[150px] object-cover"
+                            className="h-10 w-[250px] lg:w-[150px] object-cover"
                         />
                     </NavLink>
 

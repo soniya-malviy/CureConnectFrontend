@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Header from './Components/Header';
-
+import User from './Components/user';
 import AppointmentPage from './Components/Appointment';
 import LoginPage from './Components/Login';
 import AboutPage from './Components/About';
@@ -35,7 +35,8 @@ function App() {
                 { path: 'contact', element: <ContactPage /> },
                 { path: 'labTest', element: <LabTest /> },
                 { path: 'medicines', element: <Medicines /> },
-                { path: 'doctor/:id', element: <DoctorProfilePage /> }, // Add DoctorProfilePage route
+                { path: 'doctor/:id', element: <DoctorProfilePage /> },
+                {path:'profile', element:<User/>}
             ],
         },
     ]);
