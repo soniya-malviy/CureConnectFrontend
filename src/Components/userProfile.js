@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useUser } from './user'; // Import your user context
 
 const UserProfile = () => {
+    const { user, logout } = useUser(); // Get user context data
     const [formData, setFormData] = useState({
         name: '',
         age: '',
@@ -8,9 +10,17 @@ const UserProfile = () => {
         city: '',
         state: '',
         gender: '',
-        orders: []
     });
+
     const [isProfileCreated, setIsProfileCreated] = useState(false);
+
+    useEffect(() => {
+        if (user) {
+            // Populate form data with user info if available
+            setFormData(user);
+            setIsProfileCreated(true);
+        }
+    }, [user]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -19,7 +29,23 @@ const UserProfile = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        // Here you could save form data to your user context or API
+        // For this example, we simply set the profile created state to true
         setIsProfileCreated(true);
+    };
+
+    const handleDeleteProfile = () => {
+        // Clear user data and reset form
+        logout(); // Call logout to clear user data
+        setFormData({
+            name: '',
+            age: '',
+            address: '',
+            city: '',
+            state: '',
+            gender: '',
+        });
+        setIsProfileCreated(false); // Reset profile state
     };
 
     return (
@@ -27,7 +53,6 @@ const UserProfile = () => {
             {isProfileCreated ? (
                 <div className="text-center">
                     <h2 className="text-2xl font-bold mb-4">Your Profile!</h2>
-
                     <div className="text-left space-y-2">
                         <p><strong>Name:</strong> {formData.name}</p>
                         <p><strong>Age:</strong> {formData.age}</p>
@@ -35,8 +60,13 @@ const UserProfile = () => {
                         <p><strong>City:</strong> {formData.city}</p>
                         <p><strong>State:</strong> {formData.state}</p>
                         <p><strong>Gender:</strong> {formData.gender}</p>
-
                     </div>
+                    <button
+                        onClick={handleDeleteProfile} // Call delete profile function when clicked
+                        className="mt-4 bg-red-600 text-white font-semibold py-2 rounded-md shadow hover:bg-red-700 transition duration-200"
+                    >
+                        Delete Profile
+                    </button>
                 </div>
             ) : (
                 <div>
@@ -105,6 +135,7 @@ const UserProfile = () => {
                                         type="radio"
                                         name="gender"
                                         value="male"
+                                        checked={formData.gender === 'male'}
                                         onChange={handleChange}
                                         required
                                         className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
@@ -116,6 +147,7 @@ const UserProfile = () => {
                                         type="radio"
                                         name="gender"
                                         value="female"
+                                        checked={formData.gender === 'female'}
                                         onChange={handleChange}
                                         required
                                         className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
@@ -127,6 +159,7 @@ const UserProfile = () => {
                                         type="radio"
                                         name="gender"
                                         value="other"
+                                        checked={formData.gender === 'other'}
                                         onChange={handleChange}
                                         required
                                         className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
@@ -135,7 +168,6 @@ const UserProfile = () => {
                                 </label>
                             </div>
                         </div>
-
                         <button
                             type="submit"
                             className="w-full mt-4 bg-blue-600 text-white font-semibold py-2 rounded-md shadow hover:bg-blue-700 transition duration-200"

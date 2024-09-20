@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { useUser } from './user'; // Import the UserContext
+import { useUser } from './user';
 import 'react-toastify/dist/ReactToastify.css';
 
 // Mock storage
@@ -10,67 +10,60 @@ const mockStorage = {
 };
 
 const LoginPage = () => {
-    const { login } = useUser(); // Get login function from context
+    const { login } = useUser();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isSignup, setIsSignup] = useState(false);
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
-
         if (!email || !password) {
             toast.error('Please fill in all fields');
             return;
         }
+        setLoading(true);
 
-        const mockLogin = (email, password) => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    const user = mockStorage.users.find(
-                        (user) => user.email === email && user.password === password
-                    );
-                    if (user) {
-                        resolve(true);
-                    } else {
-                        reject(new Error('Invalid email or password'));
-                    }
-                }, 1000);
-            });
-        };
+        const mockLogin = (email, password) => new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const user = mockStorage.users.find(
+                    (user) => user.email === email && user.password === password
+                );
+                user ? resolve(true) : reject(new Error('Invalid email or password'));
+            }, 1000);
+        });
 
         try {
             await mockLogin(email, password);
-            login(); // Mark user as logged in
-            navigate('/userprofile'); // Redirect to profile after login
+            login({ email }); // Store user data
+            navigate('/userprofile');
         } catch (error) {
             toast.error(error.message);
+        } finally {
+            setLoading(false);
         }
     };
 
     const handleSignup = async (e) => {
         e.preventDefault();
-
         if (!email || !password) {
             toast.error('Please fill in all fields');
             return;
         }
+        setLoading(true);
 
-        const mockSignup = (email, password) => {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    const userExists = mockStorage.users.some(
-                        (user) => user.email === email
-                    );
-                    if (userExists) {
-                        reject(new Error('User already registered'));
-                    } else {
-                        mockStorage.users.push({ email, password });
-                        resolve(true);
-                    }
-                }, 1000);
-            });
-        };
+        const mockSignup = (email, password) => new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const userExists = mockStorage.users.some(user => user.email === email);
+                if (userExists) {
+                    reject(new Error('User already registered'));
+                } else {
+                    mockStorage.users.push({ email, password });
+                    resolve(true);
+                }
+            }, 1000);
+        });
 
         try {
             await mockSignup(email, password);
@@ -80,6 +73,8 @@ const LoginPage = () => {
             setPassword('');
         } catch (error) {
             toast.error(error.message);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -128,9 +123,10 @@ const LoginPage = () => {
                         </div>
                         <button
                             type="submit"
-                            className="w-full py-2 px-4 bg-theme-dark-blue text-white font-semibold rounded-md shadow-sm hover:bg-theme-light-colour focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                            className={`w-full py-2 px-4 ${loading ? 'bg-gray-400' : 'bg-theme-dark-blue'} text-white font-semibold rounded-md shadow-sm hover:bg-theme-light-colour focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2`}
+                            disabled={loading}
                         >
-                            {isSignup ? 'Sign Up' : 'Login'}
+                            {loading ? 'Loading...' : (isSignup ? 'Sign Up' : 'Login')}
                         </button>
                         <p className="mt-4 text-center text-sm text-gray-600">
                             {isSignup ? (
