@@ -38,10 +38,14 @@ const Medicines = () => {
     );
 
     return (
-        <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
+        <div
+            className="flex flex-col lg:flex-row min-h-screen bg-gray-100"
+            style={{
+                backgroundImage: "url('https://image.pbs.org/video-assets/fLmQ0vT-asset-mezzanine-16x9-VEQDFyZ.jpeg')",
+            }}
+        >
             <div className="flex-1 p-4 lg:p-8">
                 <h2 className="text-3xl font-bold mb-6 text-center text-theme-dark-blue">Available Medicines</h2>
-
 
 
                 <div className="relative max-w-md mx-auto mb-8">
@@ -52,17 +56,16 @@ const Medicines = () => {
                         onChange={handleSearch}
                         className="border border-gray-300 rounded-lg p-3 pl-10 pr-14 w-full focus:outline-none focus:ring-2 focus:ring-theme-dark-bluetransition"
                     />
-                    <FaSearch className="absolute top-3 left-3 text-gray-500" />
+                    <FaSearch className="absolute top-3 left-3 text-gray-500"/>
                     {searchQuery && (
                         <button
                             onClick={() => setSearchQuery('')}
                             className="absolute top-3 right-3 text-gray-500"
                         >
-                            <FaTimes />
+                            <FaTimes/>
                         </button>
                     )}
                 </div>
-
 
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

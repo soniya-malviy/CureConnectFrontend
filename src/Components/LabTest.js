@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import tests from '../LabTests.json';
 import { FaSearch, FaTimes } from 'react-icons/fa';
 import { useUser } from './user';
-import { useCart } from './CartContext'; // Import the Cart context
+import { useCart } from './CartContext';
 
 const LabTest = () => {
     const { isLoggedIn } = useUser();
@@ -29,7 +29,7 @@ const LabTest = () => {
 
     return (
         <div className="flex flex-col lg:flex-row min-h-screen bg-gray-100">
-            <div className="flex-1 p-4 lg:p-8">
+            <div className="flex-1 p-4 lg:p-8 bg-cover bg-center" style={{ backgroundImage: "url(https://image.pbs.org/video-assets/fLmQ0vT-asset-mezzanine-16x9-VEQDFyZ.jpeg)" }}>
                 <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-center text-theme-dark-blue">Available Lab Tests</h2>
                 <div className="mb-6 flex justify-center">
                     <div className="relative w-full max-w-md lg:max-w-lg">
@@ -72,15 +72,11 @@ const LabTest = () => {
                                         </button>
                                     </div>
                                     {/* Back Side */}
-                                    <div
-                                        className="flip-card-back bg-white shadow-lg rounded-lg p-4 border border-gray-300 flex flex-col items-center ">
+                                    <div className="flip-card-back bg-white shadow-lg rounded-lg p-4 border border-gray-300 flex flex-col items-center ">
                                         <h3 className="text-xl lg:text-2xl font-semibold mb-2">{test.test_type}</h3>
                                         <p className="text-gray-800 mb-2">
-
-                                            <strong>Description:</strong> {test.description}</p>
-
-
-
+                                            <strong>Description:</strong> {test.description}
+                                        </p>
                                     </div>
                                 </div>
                             </div>

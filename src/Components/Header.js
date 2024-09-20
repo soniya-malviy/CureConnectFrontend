@@ -3,9 +3,10 @@ import { NavLink, Outlet } from 'react-router-dom';
 import LOGO from '../assets/LOGO.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-
+import { useUser } from './user'; // Import UserContext
 
 const Header = () => {
+    const { user, logout } = useUser(); // Get user info and logout function from context
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -55,18 +56,23 @@ const Header = () => {
                         <NavLink to="/medicines" className="block py-2 px-4 text-black hover:text-theme-dark-blue">
                             Medicines
                         </NavLink>
-                        <NavLink to="/login" className="block py-2 px-4 text-black hover:text-theme-dark-blue">
-                            Login
-                        </NavLink>
-                        <NavLink to="/cart"
-                                 className="flex items-center py-2 px-4 text-black hover:text-theme-dark-blue">
-                            <FontAwesomeIcon icon={faShoppingCart} className="h-6 w-6 mr-2"/>
+                        {user ? (
+                            <NavLink to="/userprofile" className="flex items-center py-2 px-4 text-black hover:text-theme-dark-blue">
+                                <img src="/path/to/profile-logo.png" alt="Profile" className="h-6 w-6 mr-2" /> {/* Profile logo */}
+                            </NavLink>
+                        ) : (
+                            <NavLink to="/login" className="block py-2 px-4 text-black hover:text-theme-dark-blue">
+                                Login
+                            </NavLink>
+                        )}
+                        <NavLink to="/cart" className="flex items-center py-2 px-4 text-black hover:text-theme-dark-blue">
+                            <FontAwesomeIcon icon={faShoppingCart} className="h-6 w-6 mr-2" />
                             Cart
                         </NavLink>
                     </nav>
                 </div>
             </header>
-            <Outlet/>
+            <Outlet />
         </>
     );
 };
