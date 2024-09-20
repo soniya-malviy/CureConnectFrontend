@@ -25,7 +25,45 @@ const MainComponent = () => {
         <div className="p-6 bg-white shadow-lg rounded-lg max-w-md mx-auto mt-10 mb-10">
             <h2 className="text-2xl font-bold mb-4 text-center">Shopping Cart</h2>
 
-            {/* Render Lab Tests and Medicines... */}
+            <div className="mb-4">
+                <h3 className="text-xl font-semibold mb-2">Lab Tests</h3>
+                {labTests.length === 0 ? (
+                    <p>No lab tests in the cart.</p>
+                ) : (
+                    labTests.map(test => (
+                        <div key={test.test_id} className="flex justify-between items-center border-b py-2">
+                            <span>{test.test_type} - ${test.price.toFixed(2)}</span>
+                            <button
+                                onClick={() => removeFromCartLabtest(test.test_id)}
+                                className="text-red-500 hover:underline"
+                            >
+                                Remove
+                            </button>
+                        </div>
+                    ))
+                )}
+            </div>
+
+            <div className="mb-4">
+                <h3 className="text-xl font-semibold mb-2">Medicines</h3>
+                {medicines.length === 0 ? (
+                    <p>No medicines in the cart.</p>
+                ) : (
+                    medicines.map(medicine => (
+                        <div key={medicine.id} className="flex justify-between items-center border-b py-2">
+                            <span>{medicine.medicine_name} - ${medicine.price.toFixed(2)}</span>
+                            <button
+                                onClick={() => removeFromCartMedicine(medicine.id)}
+                                className="text-red-500 hover:underline"
+                            >
+                                Remove
+                            </button>
+                        </div>
+                    ))
+                )}
+            </div>
+
+            <div className="text-lg font-bold mb-4">Total: ${totalAmount.toFixed(2)}</div>
 
             <button
                 onClick={handleCheckout}
