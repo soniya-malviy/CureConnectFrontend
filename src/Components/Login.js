@@ -37,7 +37,7 @@ const LoginPage = () => {
         try {
             await mockLogin(email, password);
             login({ email }); // Store user data
-            navigate('/userprofile');
+            navigate('/about');
         } catch (error) {
             toast.error(error.message);
         } finally {

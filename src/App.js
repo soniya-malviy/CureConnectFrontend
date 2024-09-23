@@ -10,7 +10,7 @@ import Footer from './Components/Footer';
 import LabTest from "./Components/LabTest";
 import Medicines from "./Components/Medicines";
 import DoctorProfilePage from "./Components/DoctorProfile";
-import UserProfile from "./Components/userProfile";
+// import UserProfile from "./Components/userProfile";
 import Cart from "./Components/cart"; // Import Cart component
 import { ToastContainer } from 'react-toastify';
 import './index.css';
@@ -39,7 +39,7 @@ function App() {
                 { path: 'labTest', element: <LabTest /> },
                 { path: 'medicines', element: <Medicines /> },
                 { path: 'doctor/:id', element: <DoctorProfilePage /> },
-                { path: 'userprofile', element: <UserProfile /> },
+                // { path: 'userprofile', element: <UserProfile /> },
                 { path: 'cart', element: <Cart /> } // Add Cart route
             ],
         },

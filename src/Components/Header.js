@@ -19,13 +19,13 @@ const Header = () => {
 
     return (
         <>
-            <header className="bg-[rgba(255,255,255,0.3)] text-black py-4 shadow-lg">
-                <div className="container mx-auto flex items-center justify-between px-4">
+            <header className="bg-white text-black py-4 shadow-md sticky top-0 z-50">
+                <div className="container mx-auto max-w-6xl flex items-center justify-between px-6">
                     <NavLink to="/about" className="flex items-center">
                         <img
                             src={LOGO}
                             alt="website-logo"
-                            className="h-10 w-[250px] lg:w-[150px] object-cover"
+                            className="h-10 w-auto"
                         />
                     </NavLink>
 
@@ -59,8 +59,6 @@ const Header = () => {
                             <FontAwesomeIcon icon={faShoppingCart} className="h-6 w-6 mr-2" />
                             Cart
                         </NavLink>
-                        <NavLink to="/userProfile" className="block py-2 px-4 text-black hover:text-theme-dark-blue"><FontAwesomeIcon icon={faUser} className="h-6 w-6 mr-2" /></NavLink>
-
                     </nav>
                 </div>
             </header>

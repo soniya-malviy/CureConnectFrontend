@@ -12,6 +12,11 @@ const DoctorProfilePage = () => {
     const [newReview, setNewReview] = useState('');
     const [reviewerName, setReviewerName] = useState('');
 
+    const currentDateTime = new Date(); // Add this line
+
+
+
+
     useEffect(() => {
         const doctorData = doctors.find(doc => doc.id === parseInt(id));
         if (doctorData) {
@@ -21,6 +26,9 @@ const DoctorProfilePage = () => {
             });
         }
     }, [id]);
+
+    // Get today's date in YYYY-MM-DD format
+    const today = new Date().toISOString().split('T')[0];
 
     const handleDateChange = (e) => {
         setSelectedDate(e.target.value);
@@ -35,9 +43,17 @@ const DoctorProfilePage = () => {
             setErrorMessage('Both date and time fields are required.');
             return;
         }
+
+        const selectedDateTime = new Date(`${selectedDate}T${selectedTime}`); // Add this line
+        if (selectedDateTime < currentDateTime) { // Add this check
+            setErrorMessage('Selected date and time cannot be in the past.'); // Set error message
+            return;
+        }
+
         setErrorMessage('');
         setIsPopupVisible(true);
     };
+
 
     const handleClosePopup = () => {
         setIsPopupVisible(false);
@@ -158,6 +174,7 @@ const DoctorProfilePage = () => {
                             type="date"
                             value={selectedDate}
                             onChange={handleDateChange}
+                            min={today}  // Set the minimum date to today
                             className="w-full p-2 border border-gray-300 rounded"
                         />
                     </div>
@@ -199,4 +216,3 @@ const DoctorProfilePage = () => {
 };
 
 export default DoctorProfilePage;
-
