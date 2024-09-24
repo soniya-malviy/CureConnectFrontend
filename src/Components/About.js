@@ -24,20 +24,21 @@ const AboutPage = () => {
     return (
         <>
             <div className="relative w-full h-screen bg-cover bg-center"
-                 style={{ backgroundImage: 'url(https://w0.peakpx.com/wallpaper/315/432/HD-wallpaper-medical-hospital.jpg)' }}>
+                 style={{backgroundImage: 'url(https://w0.peakpx.com/wallpaper/315/432/HD-wallpaper-medical-hospital.jpg)'}}>
                 <div className="absolute inset-0 flex items-center justify-start bg-black bg-opacity-50 p-6 sm:p-10">
                     <div className="text-white">
-                        <h1 className="text-2xl sm:text-5xl font-bold mb-5">No Compromise<br /> When It Comes to <br /> Your Well-Being</h1>
+                        <h1 className="text-2xl sm:text-5xl font-bold mb-5">No Compromise<br/> When It Comes
+                            to <br/> Your Well-Being</h1>
                         <p className="text-lg sm:text-xl mb-2">Connecting You to Trusted Doctors</p>
                         <p className="text-lg sm:text-xl">Empowering Your Well-Being</p>
                     </div>
                 </div>
 
-                <div className="absolute bottom-10 left-6 sm:left-10 flex flex-wrap justify-between">
+                <div className="absolute bottom-10 left-6 sm:left-10 flex flex-col sm:flex-row sm:space-x-2">
                     {['Appointment Booking', 'Medicine Booking', 'Lab Test Booking'].map((item, index) => (
                         <button
                             key={index}
-                            className={`relative w-24 h-16 sm:w-48 sm:h-20 bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-2 focus:outline-none mb-2 sm:mb-0 ${index < 2 ? 'mr-2' : ''}`}
+                            className="relative w-35 h-16 sm:w-40 sm:h-20 bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-2 focus:outline-none mb-2 sm:mb-0"
                             onClick={() => handleButtonClick(item)}
                         >
                             <div className="flex items-center justify-center h-full">
@@ -46,6 +47,7 @@ const AboutPage = () => {
                         </button>
                     ))}
                 </div>
+
 
             </div>
 
