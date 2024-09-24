@@ -15,23 +15,24 @@ const AboutPage = () => {
             <div className="relative w-full h-screen bg-cover bg-center"
                  style={{backgroundImage: 'url(https://w0.peakpx.com/wallpaper/315/432/HD-wallpaper-medical-hospital.jpg)'}}>
                 <div
-                    className="absolute inset-0 flex flex-col items-start justify-center bg-black bg-opacity-50 p-6 sm:p-10">
-                    <div className="text-white">
-                        <h1 className="text-2xl sm:text-5xl font-bold mb-5">No Compromise<br/> When It Comes<br/> Your
+                    className="absolute inset-0 flex flex-col items-start justify-center bg-black bg-opacity-50 p-4 sm:p-10">
+                    <div className="text-white text-left">
+                        <h1 className="text-3xl sm:text-5xl font-bold mb-4">No Compromise<br/> When It Comes<br/> Your
                             Well-Being</h1>
-                        <p className="text-lg sm:text-xl mb-2">Connecting You to Trusted Doctors</p>
-                        <p className="text-lg sm:text-xl mb-4">Empowering Your Well-Being</p>
+                        <p className="text-base sm:text-lg mb-2">Connecting You to Trusted Doctors</p>
+                        <p className="text-base sm:text-lg mb-4">Empowering Your Well-Being</p>
 
-                        <p className="text-md sm:text-lg mb-4">
+                        <p className="text-sm sm:text-md mb-4">
                             Book your appointments easily and efficiently. Our platform offers a seamless experience to
                             find the right doctor for your needs.
                         </p>
-                        <p className="text-md sm:text-lg mb-4">
+                        <p className="text-sm sm:text-md mb-4">
                             Whether you need a consultation, follow-up, or a specific treatment, we're here to assist
                             you every step of the way.
                         </p>
                         <button
-                            className="mt-4 px-6 py-2 bg-theme-dark-blue text-white rounded-lg shadow-lg hover:bg-theme-dark-blue-dark transition" onClick={handleGetStart}>
+                            className="mt-4 px-4 py-2 bg-theme-dark-blue text-white rounded-lg shadow-lg hover:bg-theme-dark-blue-dark transition"
+                            onClick={handleGetStart}>
                             Get Started
                         </button>
                     </div>
