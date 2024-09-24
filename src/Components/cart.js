@@ -88,7 +88,7 @@ const MainComponent = () => {
 
                 <button
                     onClick={handleCheckout}
-                    className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+                    className="w-full bg-theme-dark-blue text-white py-2 rounded hover:bg-blue-700 transition"
                 >
                     Proceed to Checkout
                 </button>
@@ -115,7 +115,7 @@ const MainComponent = () => {
                             <p>Please add items to your cart before proceeding to checkout.</p>
                             <button
                                 onClick={closeEmptyCartPopup}
-                                className="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition"
+                                className="mt-4 bg-theme-dark-blue text-white py-2 px-4 rounded hover:bg-blue-700 transition"
                             >
                                 Close
                             </button>

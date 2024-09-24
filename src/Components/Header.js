@@ -19,7 +19,7 @@ const Header = () => {
 
     return (
         <>
-            <header className="bg-white text-black py-4 shadow-md sticky top-0 z-50">
+            <header className="bg-transparent text-black py-4 shadow-md sticky top-0 z-50 transition-all duration-300">
                 <div className="container mx-auto max-w-6xl flex items-center justify-between px-6">
                     <NavLink to="/about" className="flex items-center">
                         <img
