@@ -12,7 +12,7 @@ const DoctorProfilePage = () => {
     const [newReview, setNewReview] = useState('');
     const [reviewerName, setReviewerName] = useState('');
 
-    const currentDateTime = new Date(); // Add this line
+    const currentDateTime = new Date();
 
 
 
@@ -22,10 +22,11 @@ const DoctorProfilePage = () => {
         if (doctorData) {
             setDoctor({
                 ...doctorData,
-                reviews: doctorData.reviews.slice(0, 1) // Take only the first review
+                reviews: doctorData.reviews.length > 0 ? doctorData.reviews.slice(0, 1) :[]
             });
         }
     }, [id]);
+
 
     // Get today's date in YYYY-MM-DD format
     const today = new Date().toISOString().split('T')[0];

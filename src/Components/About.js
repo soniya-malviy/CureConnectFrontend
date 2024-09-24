@@ -33,11 +33,11 @@ const AboutPage = () => {
                     </div>
                 </div>
 
-                <div className="absolute bottom-10 left-6 sm:left-10 flex flex-wrap space-x-2 sm:space-x-4">
+                <div className="absolute bottom-10 left-6 sm:left-10 flex flex-wrap justify-between">
                     {['Appointment Booking', 'Medicine Booking', 'Lab Test Booking'].map((item, index) => (
                         <button
                             key={index}
-                            className="relative w-full sm:w-48 h-20 sm:h-32 bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-2 focus:outline-none mb-4 sm:mb-0"
+                            className={`relative w-24 h-16 sm:w-48 sm:h-20 bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:-translate-y-2 focus:outline-none mb-2 sm:mb-0 ${index < 2 ? 'mr-2' : ''}`}
                             onClick={() => handleButtonClick(item)}
                         >
                             <div className="flex items-center justify-center h-full">
@@ -46,10 +46,12 @@ const AboutPage = () => {
                         </button>
                     ))}
                 </div>
+
             </div>
 
             <div className="p-6 sm:p-10">
-                <div className="thought-container p-6 sm:p-10 max-w-7xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out flex flex-col lg:flex-row">
+                <div
+                    className="thought-container p-6 sm:p-10 max-w-7xl mx-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out flex flex-col lg:flex-row">
                     <div className="lg:w-1/2 flex flex-col">
                         <div className="thought-content mb-8 text-lg sm:text-2xl font-bold text-gray-700">
                             <span className="block">"Good health is not just about treating illness,</span>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import LOGO from '../assets/LOGO.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,27 +6,26 @@ import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useUser } from './user';
 
 const Header = () => {
-    const { user, logout } = useUser();
+    const { user, logout, isLoggedIn } = useUser();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    useEffect(() => {
+
+    }, [isLoggedIn]);
     const handleLogout = () => {
-        logout(); // Call logout to clear user data
+        logout();
     };
 
     return (
         <>
-            <header className="bg-transparent text-black py-4 shadow-md sticky top-0 z-50 transition-all duration-300">
+            <header className="bg-white text-black py-4 shadow-md sticky top-0 z-50 transition-all duration-300">
                 <div className="container mx-auto max-w-6xl flex items-center justify-between px-6">
                     <NavLink to="/about" className="flex items-center">
-                        <img
-                            src={LOGO}
-                            alt="website-logo"
-                            className="h-10 w-auto"
-                        />
+                        <img src={LOGO} alt="website-logo" className="h-10 w-auto" />
                     </NavLink>
 
                     <button className="lg:hidden flex items-center text-black focus:outline-none" onClick={toggleMenu}>
@@ -35,23 +34,20 @@ const Header = () => {
                         </svg>
                     </button>
 
-                    <nav className={`lg:flex lg:items-center lg:space-x-4 ${isMenuOpen ? 'block' : 'hidden lg:block'}`}>
+                    <nav className={`lg:flex lg:items-center lg:space-x-4 ${isMenuOpen ? 'flex flex-col absolute top-16 left-0 right-0 bg-white shadow-md lg:static lg:flex-row lg:space-x-4' : 'hidden lg:flex'}`}>
                         <NavLink to="/about" className="block py-2 px-4 text-black hover:text-theme-dark-blue">About Us</NavLink>
                         <NavLink to="/appointment" className="block py-2 px-4 text-black hover:text-theme-dark-blue">Appointment Booking</NavLink>
                         <NavLink to="/labtest" className="block py-2 px-4 text-black hover:text-theme-dark-blue">Lab Test</NavLink>
                         <NavLink to="/medicines" className="block py-2 px-4 text-black hover:text-theme-dark-blue">Medicines</NavLink>
-                        {user ? (
+                        {isLoggedIn ? (
                             <>
-                                <NavLink to="/userprofile" className="flex items-center py-2 px-4 text-black hover:text-theme-dark-blue">
-                                    <FontAwesomeIcon icon={faUser} className="h-6 w-6 mr-2" />
-                                    Profile
-                                </NavLink>
-                                <button onClick={handleLogout} className="block py-2 px-4 text-black hover:text-theme-dark-blue">
+
+                                <NavLink to="/login" onClick={handleLogout} className="block py-2 px-4 text-black hover:text-theme-dark-blue">
                                     Logout
-                                </button>
+                                </NavLink>
                             </>
                         ) : (
-                            <NavLink to="/login" className="block py-2 px-4 text-black hover:text-theme-dark-blue">
+                            <NavLink to="/login"  className="block py-2 px-4 text-black hover:text-theme-dark-blue">
                                 Login
                             </NavLink>
                         )}

@@ -25,6 +25,7 @@ const LoginPage = () => {
         }
         setLoading(true);
 
+        // Mock login function
         const mockLogin = (email, password) => new Promise((resolve, reject) => {
             setTimeout(() => {
                 const user = mockStorage.users.find(
@@ -44,6 +45,7 @@ const LoginPage = () => {
             setLoading(false);
         }
     };
+
 
     const handleSignup = async (e) => {
         e.preventDefault();
